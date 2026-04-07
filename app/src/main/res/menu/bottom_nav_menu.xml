@@ -1,0 +1,31 @@
+── -->
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/nav_dashboard" />
+
+    <item
+        android:id="@+id/inventoryFragment"
+        android:icon="@drawable/ic_inventory"
+        android:title="@string/nav_inventory" />
+
+    <item
+        android:id="@+id/commandBottomSheet"
+        android:icon="@drawable/ic_mic"
+        android:title="@string/nav_command" />
+
+    <item
+        android:id="@+id/partiesFragment"
+        android:icon="@drawable/ic_people"
+        android:title="@string/nav_parties" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/nav_settings" />
+
+</menu>
+// ───

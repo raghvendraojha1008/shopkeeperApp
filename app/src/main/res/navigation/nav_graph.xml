@@ -1,0 +1,352 @@
+── -->
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.shopkeeper.ledger.ui.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splash_to_login"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splash_to_dashboard"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_onboarding"
+            app:destination="@id/onboardingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.shopkeeper.ledger.ui.auth.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_login_to_forgotPassword"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.shopkeeper.ledger.ui.auth.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment" />
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.shopkeeper.ledger.ui.auth.OnboardingFragment"
+        android:label="OnboardingFragment">
+        <action
+            android:id="@+id/action_onboarding_to_dashboard"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.shopkeeper.ledger.ui.dashboard.DashboardFragment"
+        android:label="DashboardFragment">
+        <action
+            android:id="@+id/action_dashboard_to_ledger"
+            app:destination="@id/ledgerFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_bulkImport"
+            app:destination="@id/bulkImportFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_stockValuation"
+            app:destination="@id/stockValuationFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_salesDashboard"
+            app:destination="@id/salesDashboardFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_purchaseDashboard"
+            app:destination="@id/purchaseDashboardFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_analytics"
+            app:destination="@id/analyticsFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_pending"
+            app:destination="@id/pendingFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_reports"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_vehicles"
+            app:destination="@id/vehiclesFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_gameTimeline"
+            app:destination="@id/gameTimelineFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_expenses"
+            app:destination="@id/expensesFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_transactions"
+            app:destination="@id/transactionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="com.shopkeeper.ledger.ui.inventory.InventoryFragment"
+        android:label="InventoryFragment">
+        <action
+            android:id="@+id/action_inventory_to_itemDetail"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_inventory_to_waste"
+            app:destination="@id/wasteFragment" />
+        <action
+            android:id="@+id/action_inventory_to_barcode"
+            app:destination="@id/barcodeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.shopkeeper.ledger.ui.inventory.ItemDetailFragment"
+        android:label="ItemDetailFragment">
+        <action
+            android:id="@+id/action_itemDetail_to_waste"
+            app:destination="@id/wasteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wasteFragment"
+        android:name="com.shopkeeper.ledger.ui.inventory.WasteFragment"
+        android:label="WasteFragment" />
+
+    <fragment
+        android:id="@+id/barcodeFragment"
+        android:name="com.shopkeeper.ledger.ui.inventory.BarcodeFragment"
+        android:label="BarcodeFragment" />
+
+    <fragment
+        android:id="@+id/ledgerFragment"
+        android:name="com.shopkeeper.ledger.ui.ledger.LedgerFragment"
+        android:label="LedgerFragment">
+        <action
+            android:id="@+id/action_ledger_to_entryDetail"
+            app:destination="@id/entryDetailFragment" />
+        <action
+            android:id="@+id/action_ledger_to_invoicePreview"
+            app:destination="@id/invoicePreviewFragment" />
+        <action
+            android:id="@+id/action_ledger_to_receiptPreview"
+            app:destination="@id/receiptPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/entryDetailFragment"
+        android:name="com.shopkeeper.ledger.ui.ledger.EntryDetailFragment"
+        android:label="EntryDetailFragment" />
+
+    <fragment
+        android:id="@+id/invoicePreviewFragment"
+        android:name="com.shopkeeper.ledger.ui.ledger.InvoicePreviewFragment"
+        android:label="InvoicePreviewFragment" />
+
+    <fragment
+        android:id="@+id/receiptPreviewFragment"
+        android:name="com.shopkeeper.ledger.ui.ledger.ReceiptPreviewFragment"
+        android:label="ReceiptPreviewFragment" />
+
+    <fragment
+        android:id="@+id/partiesFragment"
+        android:name="com.shopkeeper.ledger.ui.parties.PartiesFragment"
+        android:label="PartiesFragment">
+        <action
+            android:id="@+id/action_parties_to_partyDetail"
+            app:destination="@id/partyDetailFragment" />
+        <action
+            android:id="@+id/action_parties_to_partyStatement"
+            app:destination="@id/partyStatementFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/partyDetailFragment"
+        android:name="com.shopkeeper.ledger.ui.parties.PartyDetailFragment"
+        android:label="PartyDetailFragment" />
+
+    <fragment
+        android:id="@+id/partyStatementFragment"
+        android:name="com.shopkeeper.ledger.ui.parties.PartyStatementFragment"
+        android:label="PartyStatementFragment" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.SettingsFragment"
+        android:label="SettingsFragment">
+        <action
+            android:id="@+id/action_settings_to_profile"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_settings_to_automation"
+            app:destination="@id/automationFragment" />
+        <action
+            android:id="@+id/action_settings_to_security"
+            app:destination="@id/securityFragment" />
+        <action
+            android:id="@+id/action_settings_to_aiSettings"
+            app:destination="@id/aiSettingsFragment" />
+        <action
+            android:id="@+id/action_settings_to_fieldVisibility"
+            app:destination="@id/fieldVisibilityFragment" />
+        <action
+            android:id="@+id/action_settings_to_userManagement"
+            app:destination="@id/userManagementFragment" />
+        <action
+            android:id="@+id/action_settings_to_themePicker"
+            app:destination="@id/themePickerFragment" />
+        <action
+            android:id="@+id/action_settings_to_invoiceTemplate"
+            app:destination="@id/invoiceTemplateFragment" />
+        <action
+            android:id="@+id/action_settings_to_dataZone"
+            app:destination="@id/dataZoneFragment" />
+        <action
+            android:id="@+id/action_settings_to_customLists"
+            app:destination="@id/customListsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.ProfileFragment"
+        android:label="ProfileFragment" />
+
+    <fragment
+        android:id="@+id/automationFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.AutomationFragment"
+        android:label="AutomationFragment" />
+
+    <fragment
+        android:id="@+id/securityFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.SecurityFragment"
+        android:label="SecurityFragment" />
+
+    <fragment
+        android:id="@+id/aiSettingsFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.AiSettingsFragment"
+        android:label="AiSettingsFragment" />
+
+    <fragment
+        android:id="@+id/fieldVisibilityFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.FieldVisibilityFragment"
+        android:label="FieldVisibilityFragment" />
+
+    <fragment
+        android:id="@+id/userManagementFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.UserManagementFragment"
+        android:label="UserManagementFragment" />
+
+    <fragment
+        android:id="@+id/themePickerFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.ThemePickerFragment"
+        android:label="ThemePickerFragment" />
+
+    <fragment
+        android:id="@+id/invoiceTemplateFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.InvoiceTemplateFragment"
+        android:label="InvoiceTemplateFragment" />
+
+    <fragment
+        android:id="@+id/dataZoneFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.DataZoneFragment"
+        android:label="DataZoneFragment" />
+
+    <fragment
+        android:id="@+id/customListsFragment"
+        android:name="com.shopkeeper.ledger.ui.settings.CustomListsFragment"
+        android:label="CustomListsFragment" />
+
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.shopkeeper.ledger.ui.transactions.TransactionsFragment"
+        android:label="TransactionsFragment" />
+
+    <fragment
+        android:id="@+id/expensesFragment"
+        android:name="com.shopkeeper.ledger.ui.expenses.ExpensesFragment"
+        android:label="ExpensesFragment" />
+
+    <fragment
+        android:id="@+id/vehiclesFragment"
+        android:name="com.shopkeeper.ledger.ui.vehicles.VehiclesFragment"
+        android:label="VehiclesFragment" />
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.shopkeeper.ledger.ui.reports.ReportsFragment"
+        android:label="ReportsFragment" />
+
+    <fragment
+        android:id="@+id/analyticsFragment"
+        android:name="com.shopkeeper.ledger.ui.analytics.AnalyticsFragment"
+        android:label="AnalyticsFragment" />
+
+    <fragment
+        android:id="@+id/bulkImportFragment"
+        android:name="com.shopkeeper.ledger.ui.bulkimport.BulkImportFragment"
+        android:label="BulkImportFragment" />
+
+    <fragment
+        android:id="@+id/stockValuationFragment"
+        android:name="com.shopkeeper.ledger.ui.stockvaluation.StockValuationFragment"
+        android:label="StockValuationFragment" />
+
+    <fragment
+        android:id="@+id/salesDashboardFragment"
+        android:name="com.shopkeeper.ledger.ui.dashboard.SalesDashboardFragment"
+        android:label="SalesDashboardFragment" />
+
+    <fragment
+        android:id="@+id/purchaseDashboardFragment"
+        android:name="com.shopkeeper.ledger.ui.dashboard.PurchaseDashboardFragment"
+        android:label="PurchaseDashboardFragment" />
+
+    <fragment
+        android:id="@+id/pendingFragment"
+        android:name="com.shopkeeper.ledger.ui.dashboard.PendingFragment"
+        android:label="PendingFragment" />
+
+    <fragment
+        android:id="@+id/gameTimelineFragment"
+        android:name="com.shopkeeper.ledger.ui.game.GameTimelineFragment"
+        android:label="GameTimelineFragment" />
+
+    <fragment
+        android:id="@+id/lockFragment"
+        android:name="com.shopkeeper.ledger.ui.LockFragment"
+        android:label="LockFragment" />
+
+    <fragment
+        android:id="@+id/recycleBinFragment"
+        android:name="com.shopkeeper.ledger.ui.recycle.RecycleBinFragment"
+        android:label="RecycleBinFragment" />
+
+    <fragment
+        android:id="@+id/auditLogFragment"
+        android:name="com.shopkeeper.ledger.ui.audit.AuditLogFragment"
+        android:label="AuditLogFragment" />
+
+    <dialog
+        android:id="@+id/commandBottomSheet"
+        android:name="com.shopkeeper.ledger.ui.common.CommandBottomSheet"
+        android:label="CommandBottomSheet" />
+
+    <action
+        android:id="@+id/action_any_to_lock"
+        app:destination="@id/lockFragment" />
+
+    <action
+        android:id="@+id/action_recycleBin"
+        app:destination="@id/recycleBinFragment" />
+
+    <action
+        android:id="@+id/action_auditLog"
+        app:destination="@id/auditLogFragment" />
+
+</navigation>
+xml<!-- ───
